@@ -51,3 +51,11 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufRead,BufNewFile *.c noremap <F5> :% w !gcc<Enter>
+set noshowmode
+
+"plugins
+
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+call plug#end()
