@@ -1,5 +1,6 @@
 "search
-
+let $LANG = 'en'
+set langmenu=en
 set smartcase
 set ignorecase "fuzzy search
 set incsearch
@@ -8,7 +9,7 @@ set clipboard=unnamed
 
 "color
 
-colorscheme desert
+colorscheme default
 set number
 syntax on
 syntax on
@@ -30,21 +31,21 @@ filetype indent on
 filetype plugin on
 
 "keymapping
-map <Up> <Nop>
-map <down> <Nop>
-map <right> <Nop>
-map <left> <Nop>
-imap <Up> <Nop>
-imap <down> <Nop>
-imap <right> <Nop>
-imap <left> <Nop>
-
+"map <Up> <Nop>
+"map <down> <Nop>
+"map <right> <Nop>
+"map <left> <Nop>
+"imap <Up> <Nop>
+"imap <down> <Nop>
+"imap <right> <Nop>
+"imap <left> <Nop>
+set backspace=indent,eol,start
 set ruler
 set linebreak
 "set showcmd
 "set showmode
 "set noshowmode
-set scrolloff=4
+set scrolloff=16
 "show
 "set list (show invisiable)
 autocmd WinEnter * setlocal cursorline
@@ -58,4 +59,11 @@ set noshowmode
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'rhysd/vim-clang-format'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'itchyny/calendar.vim'
+
 call plug#end()
